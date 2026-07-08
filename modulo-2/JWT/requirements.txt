@@ -1,0 +1,6 @@
+PyJWT>=2.8.0
+fastapi
+uvicorn
+python-jose
+bcrypt == 4.0.1
+python-multipart

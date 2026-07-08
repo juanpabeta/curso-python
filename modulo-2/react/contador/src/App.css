@@ -1,0 +1,12 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #920109;
+    color: #fff;
+}
+.h1-HolaMundo{
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+}

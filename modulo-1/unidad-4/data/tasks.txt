@@ -1,0 +1,10 @@
+barrer|0
+limpiar pieza|0
+hacer los trabajos de la universidad|0
+barrer|0
+jugar|0
+cocinar|0
+lavar ropa|0
+estudiar|0
+programar|0
+desarrollo|0

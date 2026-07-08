@@ -1,0 +1,109 @@
+<section
+  id="agenda-demo"
+  class="mx-auto w-full max-w-3xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16"
+  aria-labelledby="booking-demo-title"
+>
+  <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg sm:p-8 lg:p-10">
+    <header class="mb-8 text-center">
+      <p class="mb-2 text-sm font-semibold uppercase tracking-wider text-blue-700">
+        Demostración personalizada
+      </p>
+      <h2
+        id="booking-demo-title"
+        class="text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl"
+      >
+        Agenda tu demo
+      </h2>
+      <p class="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-gray-600 sm:text-base">
+        Completa el formulario y un especialista te contactará para mostrarte cómo
+        los gemelos digitales optimizan tus operaciones industriales.
+      </p>
+    </header>
+
+    <form id="booking-demo-form" class="space-y-6" novalidate>
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div>
+          <label for="full-name" class="mb-2 block text-sm font-medium text-gray-900">
+            Nombre completo
+          </label>
+          <input
+            type="text"
+            id="full-name"
+            name="full-name"
+            required
+            autocomplete="name"
+            placeholder="Ej. María López"
+            class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+          />
+        </div>
+
+        <div>
+          <label for="email" class="mb-2 block text-sm font-medium text-gray-900">
+            Correo electrónico
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            autocomplete="email"
+            placeholder="nombre@empresa.com"
+            class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+          />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div>
+          <label for="company" class="mb-2 block text-sm font-medium text-gray-900">
+            Empresa
+          </label>
+          <input
+            type="text"
+            id="company"
+            name="company"
+            required
+            autocomplete="organization"
+            placeholder="Nombre de la organización"
+            class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+          />
+        </div>
+
+        <div>
+          <label for="demo-date" class="mb-2 block text-sm font-medium text-gray-900">
+            Fecha preferida
+          </label>
+          <input
+            type="date"
+            id="demo-date"
+            name="demo-date"
+            required
+            class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label for="message" class="mb-2 block text-sm font-medium text-gray-900">
+          Mensaje (opcional)
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="Cuéntanos qué proceso deseas digitalizar..."
+          class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+        ></textarea>
+      </div>
+
+      <div class="flex justify-center pt-2">
+        <button
+          type="submit"
+          class="w-full rounded-lg bg-blue-700 px-6 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:w-auto sm:min-w-[220px]"
+        >
+          Solicitar demo
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
