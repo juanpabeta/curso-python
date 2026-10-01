@@ -1,0 +1,14 @@
+{
+  "seed": 20260914,
+  "roles": ["Administrador", "Docente", "Estudiante"],
+  "subject": {
+    "code": "QA101",
+    "name": "Calidad de Software",
+    "credits": 4
+  },
+  "period": {
+    "code": "2026-1",
+    "start_date": "2026-01-15",
+    "end_date": "2026-06-15"
+  }
+}

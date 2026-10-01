@@ -1,0 +1,9 @@
+$kind: http-request
+url: http://127.0.0.1:8000/api/clientes/acumulado?cliente_id=2
+method: GET
+queryParams:
+  - key: cliente_id
+    value: "2"
+    disabled: false
+    description: ""
+order: 2916461442230721

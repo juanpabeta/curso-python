@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://127.0.0.1:8000/api/categorias/top
+method: GET
+order: 3940036379491100

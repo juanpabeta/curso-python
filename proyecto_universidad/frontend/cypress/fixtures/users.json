@@ -1,0 +1,34 @@
+{
+  "student": {
+    "email": "student@universidad.test",
+    "password": "Secret123!",
+    "fullName": "Estudiante Universidad",
+    "role": "Estudiante",
+    "dashboardPath": "/student",
+    "dashboardHeading": "Panel del estudiante"
+  },
+  "admin": {
+    "email": "admin@universidad.test",
+    "password": "Secret123!",
+    "fullName": "Administrador Universidad",
+    "role": "Administrador",
+    "dashboardPath": "/admin",
+    "dashboardHeading": "Panel administrador"
+  },
+  "teacher": {
+    "email": "teacher@universidad.test",
+    "password": "Secret123!",
+    "fullName": "Docente Universidad",
+    "role": "Docente",
+    "dashboardPath": "/teacher",
+    "dashboardHeading": "Panel docente"
+  },
+  "invalid": {
+    "email": "unknown@universidad.test",
+    "password": "WrongPass123!",
+    "fullName": "",
+    "role": "Estudiante",
+    "dashboardPath": "/login",
+    "dashboardHeading": "Iniciar sesión"
+  }
+}

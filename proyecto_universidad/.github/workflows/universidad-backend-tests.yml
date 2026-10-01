@@ -1,0 +1,49 @@
+name: Universidad backend quality
+
+on:
+  push:
+    paths:
+      - "proyecto_universidad/backend/**"
+      - ".github/workflows/universidad-backend-tests.yml"
+  pull_request:
+    paths:
+      - "proyecto_universidad/backend/**"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: proyecto_universidad/backend
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: proyecto_universidad/backend/requirements-test.txt
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip && pip install -r requirements-test.txt
+
+      - name: Lint
+        run: ruff check app tests
+
+      - name: Test with minimum coverage
+        env:
+          DATABASE_URL: sqlite+pysqlite:///:memory:
+          JWT_SECRET_KEY: ci-only-secret-not-for-production
+          APP_ENV: testing
+        run: pytest
+
+      - name: Upload coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: universidad-coverage
+          path: proyecto_universidad/backend/coverage.xml
+          if-no-files-found: ignore

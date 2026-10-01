@@ -1,0 +1,18 @@
+workspace:
+  id: 39aafdc8-8bce-4804-8127-0aeb2a4e1ffa
+localResources:
+  specs:
+    - ../postman/specs/Api tester/Api tester.json
+    - ../postman/specs/Api tester-1/Api tester-1.json
+resourceNameMappings:
+  specs:
+    - ../postman/specs/Api tester/Api tester.json: Api tester
+    - ../postman/specs/Api tester-1/Api tester-1.json: Api tester
+cloudResources:
+  collections:
+    ../postman/collections/Api tester: 54549396-f0b1d585-e4d2-494b-8559-6884295e98bc
+  specs:
+    ../postman/specs/Api tester/Api tester.json: 54e1ff4d-7e4b-44cf-b468-9f3bdf9f1c56
+    ../postman/specs/Api tester-1/Api tester-1.json: fa2c0632-0877-4c9d-9ca0-35ce9b941147
+  globals:
+    ../postman/globals/workspace.globals.yaml: df5c72df-d430-4c43-80b3-f4382dab9c66

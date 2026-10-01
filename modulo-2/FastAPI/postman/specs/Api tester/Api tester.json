@@ -1,0 +1,67 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Api tester",
+    "version": "1.0.0",
+    "description": ""
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:8000"
+    }
+  ],
+  "paths": {
+    "/api/clientes/ranking": {
+      "get": {
+        "summary": "Ranking",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": 50
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/api/clientes/acumulado": {
+      "get": {
+        "summary": "Acumulado de un cliente",
+        "parameters": [
+          {
+            "name": "cliente_id",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": 2
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/api/categorias/top": {
+      "get": {
+        "summary": "Top de categorías",
+        "responses": {}
+      }
+    },
+    "/api/productos/bajo-promedio": {
+      "get": {
+        "summary": "Productos de bajo promedio",
+        "responses": {}
+      }
+    }
+  }
+}
