@@ -1,0 +1,2 @@
+import { useCallback, useEffect, useState } from 'react';
+export function useApi<T>(loader: () => Promise<T>, initial: T) { const [data, setData] = useState(initial); const [loading, setLoading] = useState(true); const [error, setError] = useState(''); const reload = useCallback(() => { setLoading(true); return loader().then(setData).catch(e => setError(e.message)).finally(() => setLoading(false)); }, [loader]); useEffect(() => { void reload(); }, [reload]); return { data, setData, loading, error, reload }; }

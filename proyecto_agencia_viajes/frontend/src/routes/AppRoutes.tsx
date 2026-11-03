@@ -1,0 +1,5 @@
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { useAuth } from '../auth';
+import { AppLayout } from '../layouts';
+import { ClientDetailPage, ClientsPage, DashboardPage, LoginPage, NotFoundPage, OpportunitiesPage, ReportsPage, RemindersPage } from '../pages/index';
+export function AppRoutes() { const { user, loading } = useAuth(); if (loading) return <div className="loading">Cargando sesión…</div>; return <Routes><Route path="/login" element={user ? <Navigate to="/" /> : <LoginPage />} /><Route path="/*" element={user ? <AppLayout><Routes><Route path="/" element={<DashboardPage />} /><Route path="/clientes" element={<ClientsPage />} /><Route path="/clientes/:id" element={<ClientDetailPage />} /><Route path="/oportunidades" element={<OpportunitiesPage />} /><Route path="/recordatorios" element={<RemindersPage />} /><Route path="/informes" element={<ReportsPage />} /><Route path="*" element={<NotFoundPage />} /></Routes></AppLayout> : <Navigate to="/login" replace />} /></Routes>; }

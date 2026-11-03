@@ -1,0 +1,9 @@
+from typing import Protocol
+
+from app.users.models import UserModel
+
+
+class UserRepository(Protocol):
+    def get_by_username(self, username: str) -> UserModel | None: ...
+    def get(self, user_id: int) -> UserModel | None: ...
+    def add(self, user: UserModel) -> UserModel: ...

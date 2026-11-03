@@ -1,0 +1,9 @@
+export type User = { id: number; username: string; is_active: boolean };
+export type Companion = { id: number; name: string; phone: string };
+export type Client = { id: number; name: string; phone: string; email?: string | null; companions?: Companion[] };
+export type InquiryStage = 'NEW' | 'FOLLOWING_UP' | 'WON' | 'LOST';
+export type Inquiry = { id: number; client_id: number; stage: InquiryStage; next_stages?: InquiryStage[]; created_at?: string };
+export type InteractionKind = 'CALL' | 'MESSAGE' | 'EMAIL' | 'VISIT' | 'NOTE';
+export type Interaction = { id: number; client_id: number; kind: InteractionKind; content: string; created_at?: string };
+export type Reminder = { id: number; client_id: number; due_at: string; completed: boolean };
+export type Conversion = { won: number; lost: number };

@@ -30,6 +30,7 @@ def login(payload: LoginRequest, response: Response, db: DBSessionDep) -> TokenR
     return TokenResponse(access_token=token, token_type="bearer")
 
 
+
 @router.get("/me", response_model=CurrentUserResponse)
 def read_current_user(current_user: CurrentUserDep, db: DBSessionDep) -> CurrentUserResponse:
     """Perfil persistido. La SPA lo usa para restaurar nombre, correo y roles."""
